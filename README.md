@@ -1,0 +1,1 @@
+# SezilAkdogan_TurkcellCase
