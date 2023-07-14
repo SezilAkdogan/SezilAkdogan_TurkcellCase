@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="FbC-1v-iZZ" customClass="HeaderCollectionViewCell" customModule="SezilAkdogan_TurkcellCase" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="420" height="253"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="5Ep-4P-ozx">
+                <rect key="frame" x="0.0" y="0.0" width="420" height="253"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wuN-mk-dSd">
+                        <rect key="frame" x="13.666666666666657" y="14" width="393" height="225"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="393" id="dXT-T0-8E2"/>
+                            <constraint firstAttribute="height" constant="225" id="jeQ-Lg-XH7"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="wuN-mk-dSd" firstAttribute="centerX" secondItem="5Ep-4P-ozx" secondAttribute="centerX" id="8dF-2S-DVO"/>
+                    <constraint firstItem="wuN-mk-dSd" firstAttribute="centerY" secondItem="5Ep-4P-ozx" secondAttribute="centerY" id="PB0-bA-Vri"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="420" height="253"/>
+            <connections>
+                <outlet property="homeHeaderImage" destination="wuN-mk-dSd" id="aN9-AH-Pv6"/>
+            </connections>
+            <point key="canvasLocation" x="-398" y="19"/>
+        </collectionViewCell>
+    </objects>
+</document>
