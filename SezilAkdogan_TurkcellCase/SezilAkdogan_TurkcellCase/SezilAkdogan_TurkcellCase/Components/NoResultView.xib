@@ -4,23 +4,50 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NoResultView" customModule="SezilAkdogan_TurkcellCase" customModuleProvider="target">
+            <connections>
+                <outlet property="emptyImageView" destination="beS-Kt-e9l" id="MX9-Yi-b30"/>
+                <outlet property="emptyView" destination="MC6-YT-803" id="qoY-mf-R3g"/>
+                <outlet property="titleLabel" destination="KST-7O-Fqn" id="COe-y0-q4Y"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+        <view contentMode="scaleToFill" id="MC6-YT-803">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <point key="canvasLocation" x="71" y="52"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cryingEmoji" translatesAutoresizingMaskIntoConstraints="NO" id="beS-Kt-e9l">
+                    <rect key="frame" x="135.66666666666666" y="209" width="142.99999999999997" height="143"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="143" id="Q6T-Vb-ffH"/>
+                        <constraint firstAttribute="width" constant="143" id="hz3-yP-rxD"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Results Found" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KST-7O-Fqn">
+                    <rect key="frame" x="92" y="399" width="235" height="60"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="c01-wk-hWQ"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="beS-Kt-e9l" firstAttribute="top" secondItem="c01-wk-hWQ" secondAttribute="top" constant="150" id="5b2-dE-E1C"/>
+                <constraint firstItem="KST-7O-Fqn" firstAttribute="leading" secondItem="c01-wk-hWQ" secondAttribute="leading" constant="92" id="6qE-nn-0rs"/>
+                <constraint firstItem="beS-Kt-e9l" firstAttribute="centerX" secondItem="MC6-YT-803" secondAttribute="centerX" id="Cfu-xO-2BS"/>
+                <constraint firstItem="c01-wk-hWQ" firstAttribute="bottom" secondItem="KST-7O-Fqn" secondAttribute="bottom" constant="403" id="H9i-Ml-amI"/>
+                <constraint firstItem="KST-7O-Fqn" firstAttribute="top" secondItem="beS-Kt-e9l" secondAttribute="bottom" constant="47" id="Swx-ZV-jKP"/>
+                <constraint firstItem="c01-wk-hWQ" firstAttribute="trailing" secondItem="KST-7O-Fqn" secondAttribute="trailing" constant="87" id="xat-9v-5xv"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="138.93129770992365" y="84.507042253521135"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="cryingEmoji" width="2000" height="2000"/>
     </resources>
 </document>

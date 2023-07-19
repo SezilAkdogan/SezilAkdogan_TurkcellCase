@@ -33,6 +33,10 @@ private enum Constant {
         static let font: UIFont = .systemFont(ofSize: 18, weight: .semibold)
         static let textColor: UIColor = .black
     }
+    
+    enum NavigationBackButton {
+        static let tintColor: UIColor = .black
+    }
 }
 
 // MARK: - ViewInterface
@@ -70,6 +74,7 @@ extension DetailViewController: DetailViewInterface {
     func prepareUI() {
         prepareLabels()
         prepareButtons()
+        prepareNavigationBackButtons()
     }
     
     func updateView(with gameDetailModel: GameDetailModel) {
@@ -116,7 +121,11 @@ private extension DetailViewController {
     func prepareButtons() {
         favouriteButton.setImage(Constant.FavouriteButton.emptyHeartImage, for: .normal)
         favouriteButton.addTarget(self, action: #selector(favouriteButtonTapped), for: .touchUpInside)
-  }
+    }
+    
+    func prepareNavigationBackButtons() {
+        navigationController?.navigationBar.tintColor = Constant.NavigationBackButton.tintColor
+    }
     
 }
 

@@ -41,6 +41,8 @@
 		908430BD2A619801009C9E7C /* MainTabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908430BC2A619801009C9E7C /* MainTabBarRouter.swift */; };
 		908430BF2A61BE15009C9E7C /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908430BE2A61BE15009C9E7C /* String+Extension.swift */; };
 		908430C22A61BE9D009C9E7C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908430C12A61BE9D009C9E7C /* CoreDataManager.swift */; };
+		90855FF02A687AA400A20D51 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 90855FEF2A687AA400A20D51 /* SDWebImage */; };
+		90855FF22A687AAA00A20D51 /* GamesAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 90855FF12A687AAA00A20D51 /* GamesAPI */; };
 		9088BF192A5F4E64001900A0 /* NoResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9088BF182A5F4E64001900A0 /* NoResultView.swift */; };
 		9088BF1F2A5F4F16001900A0 /* NoResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9088BF1E2A5F4F16001900A0 /* NoResultView.xib */; };
 		909364912A64F6E80091485F /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909364902A64F6E80091485F /* ArrayExtension.swift */; };
@@ -178,6 +180,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90855FF02A687AA400A20D51 /* SDWebImage in Frameworks */,
+				90855FF22A687AAA00A20D51 /* GamesAPI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +500,10 @@
 				90BFB3B72A5DEA7300C9EF4C /* PBXTargetDependency */,
 			);
 			name = SezilAkdogan_TurkcellCaseTests;
+			packageProductDependencies = (
+				90855FEF2A687AA400A20D51 /* SDWebImage */,
+				90855FF12A687AAA00A20D51 /* GamesAPI */,
+			);
 			productName = SezilAkdogan_TurkcellCaseTests;
 			productReference = 90BFB3B52A5DEA7300C9EF4C /* SezilAkdogan_TurkcellCaseTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -1002,6 +1010,15 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 906B5A7A2A60210A002FE58E /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
+		};
+		90855FEF2A687AA400A20D51 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 906B5A7A2A60210A002FE58E /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		90855FF12A687AAA00A20D51 /* GamesAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = GamesAPI;
 		};
 		90BFB3F82A5DF77600C9EF4C /* GamesAPI */ = {
 			isa = XCSwiftPackageProductDependency;
