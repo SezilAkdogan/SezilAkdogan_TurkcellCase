@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol SplashViewControllerProtocol: ViewInterface { }
+protocol SplashViewInterface: ViewInterface { }
 
 final class SplashViewController: UIViewController, Storyboarded {
     
@@ -15,7 +15,7 @@ final class SplashViewController: UIViewController, Storyboarded {
         return .splash
     }
 
-    var presenter: SplashPresenterProtocol!
+    var presenter: SplashPresenterInterface!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,4 +23,4 @@ final class SplashViewController: UIViewController, Storyboarded {
     }
 }
 
-extension SplashViewController: SplashViewControllerProtocol { }
+extension SplashViewController: SplashViewInterface { }

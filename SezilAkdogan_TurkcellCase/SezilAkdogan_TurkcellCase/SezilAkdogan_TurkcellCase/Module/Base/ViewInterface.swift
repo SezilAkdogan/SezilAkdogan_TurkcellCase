@@ -11,6 +11,7 @@ protocol ViewInterface: AnyObject {
     func showLoading()
     func hideLoading()
     func showAlert(_ title: String, _ message: String)
+    func showAlert(_ title: String, _ message: String, buttonTitle: String, completion: (() -> Void)?)
 }
 
 extension ViewInterface where Self: UIViewController {
@@ -31,6 +32,15 @@ extension ViewInterface where Self: UIViewController {
             self.present(alertController, animated: true)
         }
     }
-    
+    func showAlert(_ title: String, _ message: String, buttonTitle: String, completion: (() -> Void)?) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: buttonTitle, style: .default) { _ in
+            completion?()
+        }
+        alert.addAction(okAction)
+        
+        present(alert, animated: true, completion: nil)
+    }
 }
 

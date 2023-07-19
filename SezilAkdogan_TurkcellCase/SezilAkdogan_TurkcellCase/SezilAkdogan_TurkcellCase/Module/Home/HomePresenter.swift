@@ -8,14 +8,17 @@
 import Foundation
 import GamesAPI
 
+enum CollectionType {
+    case header
+    case list
+}
+
 // MARK: - PresenterInterface
 protocol HomePresenterInterface: PresenterInterface {
     func viewDidLoad()
-    func numberOfItems(in section: Int) -> Int
-    func configureHeaderCell( cell: HeaderCollectionViewCell, at indexPath: IndexPath)
-    func getHeaderCollectionViewCellData(with index: Int) -> GamesModel?
-    func getListCollectionViewCellData(with index: Int) -> GamesModel?
-    func didSelectItem(at indexPath: IndexPath)
+    func numberOfItems(collectionType: CollectionType) -> Int
+    func getCollectionViewCellData(row: Int, collectionType: CollectionType) -> GamesModel?
+    func didSelectItem(row: Int, collectionType: CollectionType)
     func searchBarTextDidChange(_ searchText: String)
 }
 
@@ -26,14 +29,19 @@ final class HomePresenter {
     private let router: HomeRouterInterface
     private let interactor: HomeInteractorInterface
     
-    var gameModel: [GamesModel] = []
+    var defaultHeaderModel: [GamesModel] = []
+    var defaultListModel: [GamesModel] = []
+    
+    var headerModel: [GamesModel] = []
+    var listModel: [GamesModel] = []
+    
     var filteredGameModel: [GamesModel] = []
     var isFiltering: Bool = false
     
     init(
-        view: HomeViewInterface?,
         router: HomeRouterInterface,
-        interactor: HomeInteractorInterface
+        interactor: HomeInteractorInterface,
+        view: HomeViewInterface?
     ) {
         self.router = router
         self.interactor = interactor
@@ -46,55 +54,62 @@ extension HomePresenter: HomePresenterInterface {
     
     func viewDidLoad() {
         view?.prepareUI()
+        view?.showLoading()
         interactor.fetchGames()
     }
     
-    func numberOfItems(in section: Int) -> Int {
-//        if section == 0 {
-//            return 3
-//        } else {
-//            return isFiltering ? filteredGameModel.count : gameModel.count
-//        }
-        return gameModel.count
+    func numberOfItems(collectionType: CollectionType) -> Int {
+        switch collectionType {
+        case .header:
+            return headerModel.count
+        case .list:
+            return listModel.count
+        }
     }
     
-    func configureHeaderCell(cell: HeaderCollectionViewCell, at indexPath: IndexPath) {
-//        let topGames = gameModel.prefix(3)
-//        let game = topGames[indexPath.row]
-//        cell.configure(with: game)
+    func getCollectionViewCellData(row: Int, collectionType: CollectionType) -> GamesModel? {
+        switch collectionType {
+        case .header:
+            return headerModel[safe: row]
+        case .list:
+            return listModel[safe: row]
+        }
     }
     
-    func getHeaderCollectionViewCellData(with index: Int) -> GamesModel? {
-        return gameModel[safe: index]
-    }
-    
-    
-    func getListCollectionViewCellData(with index: Int) -> GamesModel? {
-        return gameModel[safe: index]
-    }
-    
-    func didSelectItem(at indexPath: IndexPath) {
-        let game = isFiltering ? filteredGameModel[indexPath.row] : gameModel[indexPath.row]
-        guard let slug = game.slug else { return }
-        interactor.fetchGameDetails(slug: slug)
+    func didSelectItem(row: Int, collectionType: CollectionType) {
+        switch collectionType {
+        case .header:
+            guard let model = headerModel[safe: row] else { return }
+            
+            router.navigateToDetail(slug: model.slug)
+        case .list:
+            guard let model = listModel[safe: row] else { return }
+            
+            router.navigateToDetail(slug: model.slug)
+        }
     }
     
     func searchBarTextDidChange(_ searchText: String) {
         if searchText.count >= 3 {
-            filteredGameModel = gameModel.filter { game in
+            filteredGameModel = listModel.filter { game in
                 guard let name = game.name else {
                     return false
                 }
                 return name.lowercased().contains(searchText.lowercased())
+                
             }
             if filteredGameModel.isEmpty {
-                view?.showNoResultView()
+                view?.showNoResultView(isHidden: false)
             } else {
-                view?.hideNoResultView()
+                listModel = filteredGameModel
+                view?.showHeaderView(isHidden: true)
+                view?.showNoResultView(isHidden: true)
             }
         } else {
             filteredGameModel = []
-            view?.hideNoResultView()
+            listModel = defaultListModel
+            view?.showHeaderView(isHidden: false)
+            view?.showNoResultView(isHidden: true)
         }
         view?.reloadListCollectionView()
     }
@@ -103,47 +118,33 @@ extension HomePresenter: HomePresenterInterface {
 
 // MARK: - HomeInteractorOutput
 extension HomePresenter: HomeInteractorOutput {
-    func didFetchGames(_ games: Game) {
-        let gameModel = games.results?.compactMap({ gameResult in
-            let gameResult = GamesModel(id: gameResult.id,
-                                        slug: gameResult.slug,
-                                        name: gameResult.name,
-                                        released: gameResult.released,
-                                        backgroundImage: gameResult.backgroundImage,
-                                        rating: gameResult.rating
-            )
-            return gameResult
-        })
-        self.gameModel.removeAll()
-        self.gameModel = gameModel ?? []
-        view?.reloadListCollectionView()
-    }
-    
-    func didFailToFetchGames(with error: Error) {
-        
-    }
-    
-    func didFetchGameDetails(_ gameDetail: GameDetail) {
-//        router.navigateToDetail(gameModel: gameModel[row])
-    }
-    
-    func didFailToFetchGameDetails(with error: Error) {
-        
-    }
-}
-
-
-extension Array {
-    /// Safe way to get an item from specific index.
-    /// Works with O(1) complexity since *count* check is O(1) in an array.
-    /// - Parameter index: Given index.
-    subscript (safe index: Index) -> Element? {
-        return (0 <= index && index < count) ? self[index] : nil
-    }
-    
-    func chunked(into size: Int) -> [[Element]] {
-        return stride(from: 0, to: count, by: size).map {
-            Array(self[$0 ..< Swift.min($0 + size, count)])
+    func onFetchGames(_ result: Result<Game, Error>) {
+        view?.hideLoading()
+        switch result {
+        case .success(let response):
+            response.results?.forEach({ gameResult in
+                let gameResult = GamesModel(id: gameResult.id,
+                                            slug: gameResult.slug,
+                                            name: gameResult.name,
+                                            released: gameResult.released,
+                                            backgroundImage: gameResult.backgroundImage,
+                                            rating: gameResult.rating
+                )
+                
+                if headerModel.count < 3 {
+                    headerModel.append(gameResult)
+                } else {
+                    listModel.append(gameResult)
+                }
+            })
+            
+            defaultHeaderModel.append(contentsOf: headerModel)
+            defaultListModel.append(contentsOf: listModel)
+            
+            view?.reloadHeaderCollectionView()
+            view?.reloadListCollectionView()
+        case .failure(let error):
+            view?.showAlert("Error", error.localizedDescription)
         }
     }
 }

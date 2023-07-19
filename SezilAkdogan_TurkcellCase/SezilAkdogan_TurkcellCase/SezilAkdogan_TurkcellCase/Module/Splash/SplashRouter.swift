@@ -7,8 +7,8 @@
 
 import UIKit
 
-protocol SplashRouterProtocol {
-    func navigateToHome()
+protocol SplashRouterInterface {
+    func navigateToMain()
 }
 
 final class SplashRouter {
@@ -19,25 +19,25 @@ final class SplashRouter {
     }
     
     static func createModule() -> UINavigationController {
-        let view = SplashViewController.instantiate()
+
         let interactor = SplashInteractor()
+        let view = SplashViewController.instantiate()
         let navCon = UINavigationController(rootViewController: view)
+        navCon.modalPresentationStyle = .fullScreen
         let router = SplashRouter(navigationController: navCon)
-        let presenter = SplashPresenter(
-            view: view,
-            router: router,
-            interactor: interactor
-        )
+        let presenter = SplashPresenter(router: router, interactor: interactor, view: view)
         view.presenter = presenter
         interactor.output = presenter
+        
         return navCon
     }
 }
 
-extension SplashRouter: SplashRouterProtocol {
+extension SplashRouter: SplashRouterInterface {
     
-    func navigateToHome() {
-        let homeVC = HomeRouter.createModule(with: navigationController)
-        navigationController?.pushViewController(homeVC, animated: true)
+    func navigateToMain() {
+        let window = UIApplication.shared.keyWindow
+        let mainView = MainRouter.createModule()
+        window?.switchRootViewController(to: mainView)
     }
 }

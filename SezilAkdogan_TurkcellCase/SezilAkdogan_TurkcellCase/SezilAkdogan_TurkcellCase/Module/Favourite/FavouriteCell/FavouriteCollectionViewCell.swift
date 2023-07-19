@@ -9,28 +9,34 @@ import UIKit
 import SDWebImage
 
 private enum Constant {
-    enum FavourieNameLabel {
-        static let favNameLabelFont: UIFont = .systemFont(ofSize: 15, weight: .heavy)
-        static let favNameLabelColor: UIColor = .white
+    static let backgroundColor: UIColor = .clear
+    
+    enum CoverImageView {
+        static let cornerRadius: CGFloat = 18
     }
     
-    enum FavourieRelasedLabel {
-        static let favRelasedLabelFont: UIFont = .systemFont(ofSize: 14, weight: .semibold)
-        static let favRelasedLabelColor: UIColor = .systemGray6
+    enum NameLabel {
+        static let font: UIFont = .systemFont(ofSize: 15, weight: .heavy)
+        static let textColor: UIColor = .black
     }
     
-    enum FavourieRatingLabel {
-        static let favRatingLabelFont: UIFont = .systemFont(ofSize: 14, weight: .semibold)
-        static let favRatingLabelColor: UIColor = .systemGray6
+    enum ReleasedLabel {
+        static let font: UIFont = .systemFont(ofSize: 14, weight: .semibold)
+        static let textColor: UIColor = .black
+    }
+    
+    enum RatingLabel {
+        static let font: UIFont = .systemFont(ofSize: 14, weight: .semibold)
+        static let textColor: UIColor = .black
     }
 }
 
 final class FavouriteCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet private weak var favoriteImage: UIImageView!
-    @IBOutlet private weak var favoriteNameLabel: UILabel!
-    @IBOutlet private weak var favoriteRelasedLabel: UILabel!
-    @IBOutlet private weak var favoriteRatingLabel: UILabel!
+    @IBOutlet private weak var coverImageView: UIImageView!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var releasedLabel: UILabel!
+    @IBOutlet private weak var ratingLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -38,42 +44,49 @@ final class FavouriteCollectionViewCell: UICollectionViewCell {
     }
     
     func configure(with model: FavouriteModel) {
-        if let favoriteImage = model.backgroundImage, let url = URL(string: favoriteImage) {
-            self.favoriteImage.sd_setImage(with: url)
+        
+        if let backgroundImage = model.backgroundImage {
+            coverImageView.sd_setImage(with: URL(string: backgroundImage))
         }
         
-        favoriteNameLabel.text = model.name
-        favoriteRelasedLabel.text = model.released
-        if let rating = model.rating {
-            favoriteRatingLabel.text = String(rating)
-        } else {
-            favoriteRatingLabel.text = ""
+        if let nameText = model.nameText {
+            nameLabel.text = nameText
         }
+        
+        if let releasedText = model.releasedText {
+            releasedLabel.text = releasedText
+        }
+        
+        if let rating = model.ratings {
+            ratingLabel.text = String(format: "%.2f", rating)
+        }
+        
     }
    
 }
 
-
 // MARK: - Prepares
 private extension FavouriteCollectionViewCell {
     func prepareUI() {
-        prepareLabel()
+        backgroundColor = Constant.backgroundColor
+        
+        prepareLabels()
         prepareImageView()
     }
     
-    func prepareLabel() {
-        favoriteNameLabel.textColor = Constant.FavourieNameLabel.favNameLabelColor
-        favoriteNameLabel.font = Constant.FavourieNameLabel.favNameLabelFont
+    func prepareLabels() {
+        nameLabel.textColor = Constant.NameLabel.textColor
+        nameLabel.font = Constant.NameLabel.font
         
-        favoriteRelasedLabel.textColor = Constant.FavourieRelasedLabel.favRelasedLabelColor
-        favoriteRelasedLabel.font = Constant.FavourieRelasedLabel.favRelasedLabelFont
+        releasedLabel.textColor = Constant.ReleasedLabel.textColor
+        releasedLabel.font = Constant.ReleasedLabel.font
         
-        favoriteRatingLabel.font = Constant.FavourieRatingLabel.favRatingLabelFont
-        favoriteRatingLabel.textColor = Constant.FavourieRatingLabel.favRatingLabelColor
+        ratingLabel.font = Constant.RatingLabel.font
+        ratingLabel.textColor = Constant.RatingLabel.textColor
     }
     
     func prepareImageView() {
-        favoriteImage.layer.cornerRadius = 18
+        coverImageView.layer.cornerRadius = Constant.CoverImageView.cornerRadius
     }
     
 }

@@ -9,9 +9,9 @@ import UIKit
 
 class NoResultView: UIView {
 
-    @IBOutlet private weak var contentView: UIView!
-    @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var messageLabel: UILabel!
+//    @IBOutlet private weak var contentView: UIView!
+//    @IBOutlet private weak var titleLabel: UILabel!
+//    @IBOutlet private weak var messageLabel: UILabel!
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,9 +25,9 @@ class NoResultView: UIView {
 
     private func commonInit() {
         Bundle.main.loadNibNamed("NoResultView", owner: self, options: nil)
-        addSubview(contentView)
-        contentView.frame = self.bounds
-        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+//        addSubview(contentView)
+//        contentView.frame = self.bounds
+//        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
 
 }

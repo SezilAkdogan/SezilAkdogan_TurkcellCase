@@ -8,24 +8,22 @@
 import UIKit
 
 // MARK: - RouterInterface
-protocol DetailRouterInterface { }
+protocol DetailRouterInterface: RouterInterface { }
 
 // MARK: - DetailRouter
 final class DetailRouter {
-    private weak var presenter: DetailPresenter?
     private weak var navigationController: UINavigationController?
 
     init(navigationController: UINavigationController?) {
         self.navigationController = navigationController
     }
     
-    static func createModule(navigationController: UINavigationController?, gameDetailModel: GameDetailModel) -> UIViewController {
+    static func createModule(navigationController: UINavigationController?, slug: String?) -> UIViewController {
 
         let interactor = DetailInteractor()
         let view = DetailViewController.instantiate()
         let router = DetailRouter(navigationController: navigationController)
-        let presenter = DetailPresenter(router: router, interactor: interactor, view: view, gameDetailModel: gameDetailModel)
-        router.presenter = presenter
+        let presenter = DetailPresenter(router: router, interactor: interactor, view: view, slug: slug)
         view.presenter = presenter
         interactor.output = presenter
         
@@ -35,4 +33,3 @@ final class DetailRouter {
 
 // MARK: - DetailRouterInterface
 extension DetailRouter: DetailRouterInterface { }
-

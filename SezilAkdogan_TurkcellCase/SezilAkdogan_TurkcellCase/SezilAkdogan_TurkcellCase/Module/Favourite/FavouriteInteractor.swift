@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - InteractorInterface
-protocol FavouriteInteractorInterface {
+protocol FavouriteInteractorInterface: InteractorInterface {
     
 }
 

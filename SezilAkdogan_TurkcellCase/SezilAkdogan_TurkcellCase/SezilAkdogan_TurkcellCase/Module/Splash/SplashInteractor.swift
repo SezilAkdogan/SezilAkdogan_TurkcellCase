@@ -7,23 +7,14 @@
 
 import Foundation
 
-protocol SplashInteractorProtocol {
-    func checkInternetConnection()
-}
+protocol SplashInteractorInterface { }
 
-protocol SplashInteractorOutputProtocol {
-    func internetConnectionStatus(_ status: Bool)
-}
+protocol SplashInteractorOutput: AnyObject { }
 
 final class SplashInteractor {
-    var output: SplashInteractorOutputProtocol?
+    weak var output: SplashInteractorOutput?
 }
 
-extension SplashInteractor: SplashInteractorProtocol {
-    
-    func checkInternetConnection() {
-        let internetStatus = true // Reachability
-        self.output?.internetConnectionStatus(internetStatus)
-    }
+extension SplashInteractor: SplashInteractorInterface {
     
 }

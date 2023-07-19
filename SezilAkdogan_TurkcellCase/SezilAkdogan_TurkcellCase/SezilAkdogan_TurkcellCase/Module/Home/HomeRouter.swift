@@ -9,8 +9,7 @@ import UIKit
 
 // MARK: - RouterInterface
 protocol HomeRouterInterface {
-    func navigateToDetail(gameResult: GameDetailModel)
-    func navigateToFavourite()
+    func navigateToDetail(slug: String?)
 }
 
 // MARK: - HomeRouter
@@ -21,29 +20,25 @@ final class HomeRouter {
         self.navigationController = navigationController
     }
     
-    static func createModule(with navigationController: UINavigationController?) -> UIViewController {
+    static func createModule() -> UINavigationController {
 
         let interactor = HomeInteractor()
         let view = HomeViewController.instantiate()
-        let router = HomeRouter(navigationController: navigationController)
-        let presenter = HomePresenter(view: view, router: router, interactor: interactor)
-        
+        let navCon = UINavigationController(rootViewController: view)
+        navCon.modalPresentationStyle = .fullScreen
+        let router = HomeRouter(navigationController: navCon)
+        let presenter = HomePresenter(router: router, interactor: interactor, view: view)
         view.presenter = presenter
-        interactor.output = presenter as any HomeInteractorOutput
+        interactor.output = presenter
         
-        return view
+        return navCon
     }
 }
 
 // MARK: - HomeRouterInterface
 extension HomeRouter: HomeRouterInterface {
-    func navigateToDetail(gameResult: GameDetailModel) {
-        let view = DetailRouter.createModule(navigationController: navigationController, gameDetailModel: gameResult)
+    func navigateToDetail(slug: String?) {
+        let view = DetailRouter.createModule(navigationController: navigationController, slug: slug)
         navigationController?.pushViewController(view, animated: true)
-    }
-    
-    func navigateToFavourite() {
-        let view = FavouriteRouter.createModule()
-        navigationController?.present(view, animated: true)
     }
 }

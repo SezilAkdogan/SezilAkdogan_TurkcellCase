@@ -34,12 +34,25 @@
 		9038ABCA2A5EB916005262A9 /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038ABC92A5EB916005262A9 /* SplashRouter.swift */; };
 		9038ABCD2A5EB9D7005262A9 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038ABCC2A5EB9D7005262A9 /* Reachability.swift */; };
 		906B5A7C2A60210A002FE58E /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 906B5A7B2A60210A002FE58E /* SDWebImage */; };
+		908430B42A61972D009C9E7C /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908430B32A61972D009C9E7C /* TopViewController.swift */; };
+		908430B72A6197AA009C9E7C /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908430B62A6197AA009C9E7C /* MainTabBarViewController.swift */; };
+		908430B92A6197C6009C9E7C /* MainTabBarInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908430B82A6197C6009C9E7C /* MainTabBarInteractor.swift */; };
+		908430BB2A6197DA009C9E7C /* MainTabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908430BA2A6197DA009C9E7C /* MainTabBarPresenter.swift */; };
+		908430BD2A619801009C9E7C /* MainTabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908430BC2A619801009C9E7C /* MainTabBarRouter.swift */; };
+		908430BF2A61BE15009C9E7C /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908430BE2A61BE15009C9E7C /* String+Extension.swift */; };
+		908430C22A61BE9D009C9E7C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908430C12A61BE9D009C9E7C /* CoreDataManager.swift */; };
 		9088BF192A5F4E64001900A0 /* NoResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9088BF182A5F4E64001900A0 /* NoResultView.swift */; };
 		9088BF1F2A5F4F16001900A0 /* NoResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9088BF1E2A5F4F16001900A0 /* NoResultView.xib */; };
+		909364912A64F6E80091485F /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909364902A64F6E80091485F /* ArrayExtension.swift */; };
+		909364932A64F71E0091485F /* UICollectionViewLayoutExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909364922A64F71E0091485F /* UICollectionViewLayoutExtension.swift */; };
+		909364952A64F7460091485F /* NSNotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909364942A64F7460091485F /* NSNotificationExtension.swift */; };
+		909364972A64F9AF0091485F /* TabType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909364962A64F9AF0091485F /* TabType.swift */; };
+		909364992A64F9FE0091485F /* InteractorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909364982A64F9FE0091485F /* InteractorInterface.swift */; };
+		9093649B2A64FA220091485F /* RouterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9093649A2A64FA220091485F /* RouterInterface.swift */; };
 		90BFB3A02A5DEA7200C9EF4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BFB39F2A5DEA7200C9EF4C /* AppDelegate.swift */; };
 		90BFB3A22A5DEA7200C9EF4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BFB3A12A5DEA7200C9EF4C /* SceneDelegate.swift */; };
 		90BFB3A42A5DEA7200C9EF4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BFB3A32A5DEA7200C9EF4C /* ViewController.swift */; };
-		90BFB3AA2A5DEA7200C9EF4C /* SezilAkdogan_TurkcellCase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90BFB3A82A5DEA7200C9EF4C /* SezilAkdogan_TurkcellCase.xcdatamodeld */; };
+		90BFB3AA2A5DEA7200C9EF4C /* Favourite.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90BFB3A82A5DEA7200C9EF4C /* Favourite.xcdatamodeld */; };
 		90BFB3AC2A5DEA7300C9EF4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90BFB3AB2A5DEA7300C9EF4C /* Assets.xcassets */; };
 		90BFB3AF2A5DEA7300C9EF4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90BFB3AD2A5DEA7300C9EF4C /* LaunchScreen.storyboard */; };
 		90BFB3BA2A5DEA7300C9EF4C /* SezilAkdogan_TurkcellCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BFB3B92A5DEA7300C9EF4C /* SezilAkdogan_TurkcellCaseTests.swift */; };
@@ -106,8 +119,21 @@
 		9038ABC72A5EB906005262A9 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
 		9038ABC92A5EB916005262A9 /* SplashRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
 		9038ABCC2A5EB9D7005262A9 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		908430B32A61972D009C9E7C /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
+		908430B62A6197AA009C9E7C /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		908430B82A6197C6009C9E7C /* MainTabBarInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarInteractor.swift; sourceTree = "<group>"; };
+		908430BA2A6197DA009C9E7C /* MainTabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarPresenter.swift; sourceTree = "<group>"; };
+		908430BC2A619801009C9E7C /* MainTabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarRouter.swift; sourceTree = "<group>"; };
+		908430BE2A61BE15009C9E7C /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		908430C12A61BE9D009C9E7C /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		9088BF182A5F4E64001900A0 /* NoResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoResultView.swift; sourceTree = "<group>"; };
 		9088BF1E2A5F4F16001900A0 /* NoResultView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoResultView.xib; sourceTree = "<group>"; };
+		909364902A64F6E80091485F /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
+		909364922A64F71E0091485F /* UICollectionViewLayoutExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewLayoutExtension.swift; sourceTree = "<group>"; };
+		909364942A64F7460091485F /* NSNotificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotificationExtension.swift; sourceTree = "<group>"; };
+		909364962A64F9AF0091485F /* TabType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabType.swift; sourceTree = "<group>"; };
+		909364982A64F9FE0091485F /* InteractorInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorInterface.swift; sourceTree = "<group>"; };
+		9093649A2A64FA220091485F /* RouterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterInterface.swift; sourceTree = "<group>"; };
 		90BFB39C2A5DEA7200C9EF4C /* SezilAkdogan_TurkcellCase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SezilAkdogan_TurkcellCase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90BFB39F2A5DEA7200C9EF4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90BFB3A12A5DEA7200C9EF4C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -170,6 +196,8 @@
 			children = (
 				9038ABA22A5E9A9C005262A9 /* ViewInterface.swift */,
 				9038ABA42A5E9B77005262A9 /* PresenterInterface.swift */,
+				909364982A64F9FE0091485F /* InteractorInterface.swift */,
+				9093649A2A64FA220091485F /* RouterInterface.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -200,6 +228,26 @@
 				9038ABC92A5EB916005262A9 /* SplashRouter.swift */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		908430B52A619762009C9E7C /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				908430B62A6197AA009C9E7C /* MainTabBarViewController.swift */,
+				908430B82A6197C6009C9E7C /* MainTabBarInteractor.swift */,
+				908430BA2A6197DA009C9E7C /* MainTabBarPresenter.swift */,
+				908430BC2A619801009C9E7C /* MainTabBarRouter.swift */,
+				909364962A64F9AF0091485F /* TabType.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		908430C02A61BE70009C9E7C /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				908430C12A61BE9D009C9E7C /* CoreDataManager.swift */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 		9088BF172A5F4E34001900A0 /* Components */ = {
@@ -238,6 +286,7 @@
 			children = (
 				90BFB3E12A5DEE8A00C9EF4C /* Applications */,
 				9088BF172A5F4E34001900A0 /* Components */,
+				908430C02A61BE70009C9E7C /* Database */,
 				90BFB3DA2A5DEE0500C9EF4C /* Extensions */,
 				90BFB3E42A5DF15400C9EF4C /* Module */,
 				90BFB3D92A5DEDDC00C9EF4C /* Resources */,
@@ -245,7 +294,7 @@
 				90BFB3D32A5DED4C00C9EF4C /* Storyboards */,
 				90BFB3A32A5DEA7200C9EF4C /* ViewController.swift */,
 				90BFB3B02A5DEA7300C9EF4C /* Info.plist */,
-				90BFB3A82A5DEA7200C9EF4C /* SezilAkdogan_TurkcellCase.xcdatamodeld */,
+				90BFB3A82A5DEA7200C9EF4C /* Favourite.xcdatamodeld */,
 			);
 			path = SezilAkdogan_TurkcellCase;
 			sourceTree = "<group>";
@@ -306,6 +355,10 @@
 				90BFB3DF2A5DEE7500C9EF4C /* NSObject+Extension.swift */,
 				90BFB3DB2A5DEE2900C9EF4C /* UICollectionView+Extension.swift */,
 				90BFB3DD2A5DEE4A00C9EF4C /* UICollectionViewCell+Extensions.swift */,
+				908430BE2A61BE15009C9E7C /* String+Extension.swift */,
+				909364902A64F6E80091485F /* ArrayExtension.swift */,
+				909364922A64F71E0091485F /* UICollectionViewLayoutExtension.swift */,
+				909364942A64F7460091485F /* NSNotificationExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -315,6 +368,7 @@
 			children = (
 				90BFB39F2A5DEA7200C9EF4C /* AppDelegate.swift */,
 				90BFB3A12A5DEA7200C9EF4C /* SceneDelegate.swift */,
+				908430B32A61972D009C9E7C /* TopViewController.swift */,
 			);
 			path = Applications;
 			sourceTree = "<group>";
@@ -327,6 +381,7 @@
 				90BFB3E72A5DF24400C9EF4C /* Favourite */,
 				90BFB3E52A5DF22500C9EF4C /* Home */,
 				9038ABC22A5EB8AB005262A9 /* Splash */,
+				908430B52A619762009C9E7C /* TabBar */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -549,6 +604,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90BFB4002A5E1B4D00C9EF4C /* ListCollectionViewCell.swift in Sources */,
+				9093649B2A64FA220091485F /* RouterInterface.swift in Sources */,
 				9038ABC82A5EB906005262A9 /* SplashPresenter.swift in Sources */,
 				9038ABA72A5E9C1E005262A9 /* DetailInteractor.swift in Sources */,
 				9038ABC12A5EB384005262A9 /* FavouriteEntity.swift in Sources */,
@@ -559,6 +615,10 @@
 				9038ABBE2A5EB35C005262A9 /* FavouriteRouter.swift in Sources */,
 				90BFB3DC2A5DEE2900C9EF4C /* UICollectionView+Extension.swift in Sources */,
 				90BFB3FC2A5E19D600C9EF4C /* HeaderCollectionViewCell.swift in Sources */,
+				908430BB2A6197DA009C9E7C /* MainTabBarPresenter.swift in Sources */,
+				908430BF2A61BE15009C9E7C /* String+Extension.swift in Sources */,
+				909364952A64F7460091485F /* NSNotificationExtension.swift in Sources */,
+				909364932A64F71E0091485F /* UICollectionViewLayoutExtension.swift in Sources */,
 				9038ABB52A5EB2F2005262A9 /* FavouriteCollectionViewCell.swift in Sources */,
 				9088BF192A5F4E64001900A0 /* NoResultView.swift in Sources */,
 				9038ABA32A5E9A9C005262A9 /* ViewInterface.swift in Sources */,
@@ -572,18 +632,26 @@
 				9038ABAF2A5EA670005262A9 /* HomePresenter.swift in Sources */,
 				9038ABBC2A5EB345005262A9 /* FavouritePresenter.swift in Sources */,
 				9038AB982A5E99D1005262A9 /* StoryboardedNames.swift in Sources */,
+				908430B42A61972D009C9E7C /* TopViewController.swift in Sources */,
+				908430B72A6197AA009C9E7C /* MainTabBarViewController.swift in Sources */,
+				908430B92A6197C6009C9E7C /* MainTabBarInteractor.swift in Sources */,
 				90BFB3A02A5DEA7200C9EF4C /* AppDelegate.swift in Sources */,
 				9038ABC42A5EB8DF005262A9 /* SplashViewController.swift in Sources */,
 				90BFB3A22A5DEA7200C9EF4C /* SceneDelegate.swift in Sources */,
+				909364972A64F9AF0091485F /* TabType.swift in Sources */,
 				9038ABCA2A5EB916005262A9 /* SplashRouter.swift in Sources */,
+				909364992A64F9FE0091485F /* InteractorInterface.swift in Sources */,
+				909364912A64F6E80091485F /* ArrayExtension.swift in Sources */,
+				908430C22A61BE9D009C9E7C /* CoreDataManager.swift in Sources */,
 				90BFB3DE2A5DEE4A00C9EF4C /* UICollectionViewCell+Extensions.swift in Sources */,
 				9038ABA92A5E9C44005262A9 /* DetailPresenter.swift in Sources */,
+				908430BD2A619801009C9E7C /* MainTabBarRouter.swift in Sources */,
 				9038ABB12A5EA7A6005262A9 /* HomeRouter.swift in Sources */,
 				90BFB3D82A5DEDC100C9EF4C /* LoadingView.swift in Sources */,
 				90BFB3D62A5DEDA800C9EF4C /* LoadingShowable.swift in Sources */,
 				90BFB3F32A5DF4AC00C9EF4C /* DetailViewController.swift in Sources */,
 				90BFB3EF2A5DF42600C9EF4C /* HomeViewController.swift in Sources */,
-				90BFB3AA2A5DEA7200C9EF4C /* SezilAkdogan_TurkcellCase.xcdatamodeld in Sources */,
+				90BFB3AA2A5DEA7200C9EF4C /* Favourite.xcdatamodeld in Sources */,
 				9038ABBA2A5EB327005262A9 /* FavouriteInteractor.swift in Sources */,
 				9038AB962A5E99AA005262A9 /* Storyboarded.swift in Sources */,
 			);
@@ -942,13 +1010,13 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		90BFB3A82A5DEA7200C9EF4C /* SezilAkdogan_TurkcellCase.xcdatamodeld */ = {
+		90BFB3A82A5DEA7200C9EF4C /* Favourite.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				90BFB3A92A5DEA7200C9EF4C /* SezilAkdogan_TurkcellCase.xcdatamodel */,
 			);
 			currentVersion = 90BFB3A92A5DEA7200C9EF4C /* SezilAkdogan_TurkcellCase.xcdatamodel */;
-			path = SezilAkdogan_TurkcellCase.xcdatamodeld;
+			path = Favourite.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

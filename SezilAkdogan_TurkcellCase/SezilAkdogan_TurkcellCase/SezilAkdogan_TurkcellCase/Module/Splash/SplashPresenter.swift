@@ -7,43 +7,49 @@
 
 import Foundation
 
-protocol SplashPresenterProtocol: PresenterInterface {
-}
+protocol SplashPresenterInterface: PresenterInterface { }
 
 final class SplashPresenter {
     
-    weak var view: SplashViewControllerProtocol?
-    private let router: SplashRouterProtocol
-    private let interactor: SplashInteractorProtocol
+    weak var view: SplashViewInterface?
+    private let router: SplashRouterInterface
+    private let interactor: SplashInteractorInterface
     private let monitorManager: MonitorManager
     
-    init(
-        view: SplashViewControllerProtocol,
-        router: SplashRouterProtocol,
-        interactor: SplashInteractorProtocol,
-        monitorManager: MonitorManager = MonitorManager.shared
-    ) {
-        self.view = view
+    init(router: SplashRouterInterface,
+         interactor: SplashInteractorInterface,
+         view: SplashViewInterface,
+         monitorManager: MonitorManager = MonitorManager.shared) {
         self.router = router
         self.interactor = interactor
+        self.view = view
         self.monitorManager = monitorManager
     }
     
 }
 
-extension SplashPresenter: SplashPresenterProtocol {
+// MARK: - SplashPresenterInterface
+extension SplashPresenter: SplashPresenterInterface {
     func viewDidLoad() {
-        interactor.checkInternetConnection()
+        checkInternetConnection()
     }
 }
 
-extension SplashPresenter: SplashInteractorOutputProtocol {
-    func internetConnectionStatus(_ status: Bool) {
+// MARK: - SplashInteractorOutput
+extension SplashPresenter: SplashInteractorOutput { }
+
+// MARK: - Helper
+private extension SplashPresenter {
+    func checkInternetConnection() {
         guard monitorManager.isReachable else {
-            view?.showAlert("Error", "No internet Connection!")
+            view?.showAlert("No Internet", "You dont have Internet", buttonTitle: "Try Again" , completion: { [weak self] in
+                guard let self else { return }
+                
+                self.checkInternetConnection()
+            })
             return
         }
         
-        router.navigateToHome()
+        router.navigateToMain()
     }
 }

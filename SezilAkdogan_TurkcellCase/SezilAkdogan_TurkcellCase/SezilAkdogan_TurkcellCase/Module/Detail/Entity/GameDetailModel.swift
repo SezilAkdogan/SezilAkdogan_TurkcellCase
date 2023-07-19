@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct GameDetailModel: Decodable {
+struct GameDetailModel {
     var id: Int?
-    let slug: String?
+    let backgroundImage: String?
     let name: String?
     let released: String?
-    let backgroundImage: String?
-    let rating: Double?
+    let metacritic: String?
     let description: String?
-    let metacritic: Int?
+    let ratings: Double?
+    let slug: String?
 }

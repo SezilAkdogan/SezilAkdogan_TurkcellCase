@@ -24,42 +24,39 @@ extension UICollectionView {
         return cell
     }
     
-    func setEmptyView(title: String, message: String) {
-        let emptyView = UIView(frame: CGRect(x: self.center.x,
-                                             y: self.center.y,
-                                             width: self.bounds.size.width,
-                                             height: self.bounds.size.height))
-        let titleLabel = UILabel()
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.textColor = .label
-        titleLabel.font = .systemFont(ofSize: 18, weight: .bold)
-        titleLabel.text = title
-        titleLabel.numberOfLines = 0
-        titleLabel.textAlignment = .center
-
-        let messageLabel = UILabel()
-        messageLabel.translatesAutoresizingMaskIntoConstraints = false
-        messageLabel.textColor = .secondaryLabel
-        messageLabel.font = .systemFont(ofSize: 17, weight: .medium)
-        messageLabel.text = message
-        messageLabel.numberOfLines = 0
-        messageLabel.textAlignment = .center
-
-        emptyView.addSubview(titleLabel)
-        emptyView.addSubview(messageLabel)
+    func setEmptyView(icon: UIImage, text: String) {
+        let emptyView = UIView(frame: CGRect(x: 0, y: 0, width: bounds.size.width, height: bounds.size.height))
+        
+        let iconImageView = UIImageView(image: icon)
+        iconImageView.contentMode = .scaleAspectFit
+        iconImageView.translatesAutoresizingMaskIntoConstraints = false
+        
+        let textLabel = UILabel()
+        textLabel.text = text
+        textLabel.textAlignment = .center
+        textLabel.textColor = .white
+        textLabel.numberOfLines = 0
+        textLabel.font = .systemFont(ofSize: 17.0, weight: .semibold)
+        textLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        emptyView.addSubview(iconImageView)
+        emptyView.addSubview(textLabel)
+        
         NSLayoutConstraint.activate([
-            titleLabel.centerYAnchor.constraint(equalTo: emptyView.centerYAnchor),
-            titleLabel.centerXAnchor.constraint(equalTo: emptyView.centerXAnchor),
-            titleLabel.leadingAnchor.constraint(equalTo: emptyView.leadingAnchor, constant: 20),
-            titleLabel.trailingAnchor.constraint(equalTo: emptyView.trailingAnchor, constant: -20),
-            messageLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10),
-            messageLabel.leadingAnchor.constraint(equalTo: emptyView.leadingAnchor, constant: 20),
-            messageLabel.trailingAnchor.constraint(equalTo: emptyView.trailingAnchor, constant: -20)
+            iconImageView.centerXAnchor.constraint(equalTo: emptyView.centerXAnchor),
+            iconImageView.centerYAnchor.constraint(equalTo: emptyView.centerYAnchor, constant: -40),
+            iconImageView.widthAnchor.constraint(equalToConstant: 80),
+            iconImageView.heightAnchor.constraint(equalToConstant: 80),
+            
+            textLabel.topAnchor.constraint(equalTo: iconImageView.bottomAnchor, constant: 16),
+            textLabel.leadingAnchor.constraint(equalTo: emptyView.leadingAnchor, constant: 16),
+            textLabel.trailingAnchor.constraint(equalTo: emptyView.trailingAnchor, constant: -16)
         ])
-        self.backgroundView = emptyView
+        
+        backgroundView = emptyView
     }
+    
     func restore() {
-        self.backgroundView = nil
+        backgroundView = nil
     }
-
 }

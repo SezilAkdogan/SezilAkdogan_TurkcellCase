@@ -8,10 +8,17 @@
 import UIKit
 import SDWebImage
 
+private enum Constant {
+    enum HomeHeaderImage {
+        static let cornerRadius: CGFloat = 30
+    }
+}
+
 final class HeaderCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet private weak var homeHeaderImage: UIImageView!
-
+    
+    @IBOutlet private weak var homeHeaderImageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         prepareUI()
@@ -20,11 +27,9 @@ final class HeaderCollectionViewCell: UICollectionViewCell {
     func configure(with model: GamesModel) {
         if let homeHeaderImage = model.backgroundImage,
            let url = URL(string: homeHeaderImage) {
-            self.homeHeaderImage.sd_setImage(with: url)
+            self.homeHeaderImageView.sd_setImage(with: url)
         }
-        
     }
-
 }
 
 
@@ -32,9 +37,10 @@ final class HeaderCollectionViewCell: UICollectionViewCell {
 
 private extension HeaderCollectionViewCell {
     func prepareUI() {
-        prepareImageView()
+        prepareImageViews()
     }
-    func prepareImageView() {
-        homeHeaderImage.layer.cornerRadius = 15
+    
+    func prepareImageViews() {
+        homeHeaderImageView.layer.cornerRadius = Constant.HomeHeaderImage.cornerRadius
     }
 }
