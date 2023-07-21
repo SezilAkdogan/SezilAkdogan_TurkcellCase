@@ -71,10 +71,11 @@ Favourite screenshots
 
 Gifs of screens
 ---------------------------
-<img width="200" height="450" alt="color picker" src="" />
+<img width="200" height="450" alt="color picker" src="https://github.com/SezilAkdogan/SezilAkdogan_HW4/assets/111681902/bc6391b2-f60e-42e7-96e0-4450ec2d5220" />
 
+<img width="200" height="450" alt="color picker" src="https://github.com/SezilAkdogan/SezilAkdogan_TurkcellCase/assets/111681902/e4ad7271-3875-48a4-a393-bcfc181d7a79" />
 
+<img width="200" height="450" alt="color picker" src="https://github.com/SezilAkdogan/SezilAkdogan_TurkcellCase/assets/111681902/7c58128a-ebc6-489f-8577-37f26053f99d" />
 
-
-
+<img width="200" height="450" alt="color picker" src="https://github.com/SezilAkdogan/SezilAkdogan_TurkcellCase/assets/111681902/44ff0b44-88d3-4b09-8d46-9005f42eec0b" />
 
