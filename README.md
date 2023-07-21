@@ -45,36 +45,29 @@ When the user makes a selection from one of the lists, they can click on it to t
 
 First screenshots
 -----------------------
-<img width="200" height="450" alt="color picker" src="" />
+<img width="200" height="450" alt="color picker" src="https://github.com/SezilAkdogan/SezilAkdogan_TurkcellCase/assets/111681902/ef94c805-0dc7-40bb-bb3c-bfb494011544" />
 
+<img width="200" height="450" alt="color picker" src="https://github.com/SezilAkdogan/SezilAkdogan_TurkcellCase/assets/111681902/9ee4af5d-85e2-40e8-b2f4-e140ab9191d8)" />
 
-
-
-
-
+<img width="200" height="450" alt="color picker" src="https://github.com/SezilAkdogan/SezilAkdogan_TurkcellCase/assets/111681902/831b81f0-3f6f-416b-9fdd-bdde408d0fa3" />
 
 Second screen:
 The detail screen displays the content of the data that was clicked on from the home screen. Additionally, there is a "Add to Favorites" button on this screen. When the button is clicked, the selected game is saved to CoreData as a favorite, and it will be listed on the Favorites screen. If desired, the user can remove it from the favorites list.
 
 Second screenshots
 ------------------------
-<img width="200" height="450" alt="color picker" src="" />
-
-
-
-
-
-
+<img width="200" height="450" alt="color picker" src="https://github.com/SezilAkdogan/SezilAkdogan_TurkcellCase/assets/111681902/e403ad35-fcfc-4f01-99f0-821597792c61" />
 
 Favourite screen: 
 On the detail screen, when the user clicks the heart button located at the top right of the ImageView, the selected game is saved to CoreData, and it will be listed on this screen. When the user clicks on a saved game, it will lead to the game's detail page. However, if the game hasn't been added to favorites yet, the app will display a "No Result" view to the user.
 
 Favourite screenshots
 ------------------------
-<img width="200" height="450" alt="color picker" src="" />
+<img width="200" height="450" alt="color picker" src="https://github.com/SezilAkdogan/SezilAkdogan_TurkcellCase/assets/111681902/9505e093-1945-4723-a359-3784ea42ef18" />
 
+<img width="200" height="450" alt="color picker" src="https://github.com/SezilAkdogan/SezilAkdogan_TurkcellCase/assets/111681902/51c0fd85-8ada-441d-bd95-d15b0be25d74" />
 
-
+<img width="200" height="450" alt="color picker" src="https://github.com/SezilAkdogan/SezilAkdogan_TurkcellCase/assets/111681902/9eaaa204-2812-45f4-9cdb-de0287b8b365" />
 
 Gifs of screens
 ---------------------------
