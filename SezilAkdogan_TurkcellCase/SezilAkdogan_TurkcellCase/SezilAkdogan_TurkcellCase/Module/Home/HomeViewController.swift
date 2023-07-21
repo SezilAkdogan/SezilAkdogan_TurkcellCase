@@ -160,8 +160,6 @@ extension HomeViewController: UISearchBarDelegate {
 extension HomeViewController {
     func prepareNavigationController() {
         title = Constant.title
-        
-        //navigationItem.setHidesBackButton(true, animated: true)
     }
     
     

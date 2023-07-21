@@ -43,6 +43,54 @@ final class FavouritePresenterTests: XCTestCase {
     func testViewDidLoad() {
         presenter.viewDidLoad()
         XCTAssertTrue(mockView.prepareUICalled)
+        XCTAssertTrue(mockView.showLoadingCalled)
+        XCTAssertTrue(mockView.hideLoadingCalled)
+        XCTAssertTrue(mockView.updateEmptyViewCalled)
+        XCTAssertTrue(mockView.reloadDataCalled)
+        XCTAssertTrue(mockCoreDataManager.stubbedFavorites.isEmpty)
+    }
+    
+    func testViewWillAppear() {
+        presenter.viewWillAppear()
+        
+        XCTAssertTrue(mockView.showLoadingCalled)
+        XCTAssertTrue(mockView.hideLoadingCalled)
+        XCTAssertTrue(mockView.reloadDataCalled)
+        XCTAssertTrue(mockCoreDataManager.stubbedFavorites.isEmpty)
+    }
+    
+    func testNumberOfItems() {
+        let testFavorites: [Favourite] = [/* create your test favorite items here */]
+        mockCoreDataManager.stubbedFavorites = testFavorites
+        presenter.fetchFavourites()
+        
+        XCTAssertEqual(presenter.numberOfItems(), testFavorites.count)
+    }
+    
+    func testGetCollectionViewCellData() {
+        let testFavorites: [Favourite] = []
+        mockCoreDataManager.stubbedFavorites = testFavorites
+        presenter.fetchFavourites()
+        
+        for (index, favorite) in testFavorites.enumerated() {
+            let favoriteModel = presenter.getCollectionViewCellData(row: index)
+            XCTAssertEqual(favoriteModel?.nameText, favorite.name)
+            XCTAssertEqual(favoriteModel?.releasedText, favorite.released)
+            
+        }
+    }
+    
+    func testDidSelectItem() {
+        let testFavorites: [Favourite] = []
+        mockCoreDataManager.stubbedFavorites = testFavorites
+        presenter.fetchFavourites()
+        
+        for (index, _) in testFavorites.enumerated() {
+            presenter.didSelectItem(row: index)
+            XCTAssertTrue(mockRouter.isInvokedNavigate)
+            XCTAssertEqual(mockRouter.invokedNavigateCount, index + 1)
+            XCTAssertEqual(mockRouter.receivedSlug, testFavorites[index].slug)
+        }
     }
     
     func testFetchFavourites() {
