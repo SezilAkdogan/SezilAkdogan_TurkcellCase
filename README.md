@@ -79,3 +79,6 @@ Gifs of screens
 
 <img width="200" height="450" alt="color picker" src="https://github.com/SezilAkdogan/SezilAkdogan_TurkcellCase/assets/111681902/44ff0b44-88d3-4b09-8d46-9005f42eec0b" />
 
+<img width="200" height="450" alt="color picker" src="https://github.com/SezilAkdogan/SezilAkdogan_TurkcellCase/assets/111681902/d1a586d0-145c-4b03-b92c-c7bc5b09fccf" />
+
+<img width="200" height="450" alt="color picker" src="https://github.com/SezilAkdogan/SezilAkdogan_TurkcellCase/assets/111681902/e5a641c9-c65b-42e6-a25b-2da43c102b70" />
