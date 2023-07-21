@@ -51,6 +51,12 @@
 		909364972A64F9AF0091485F /* TabType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909364962A64F9AF0091485F /* TabType.swift */; };
 		909364992A64F9FE0091485F /* InteractorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909364982A64F9FE0091485F /* InteractorInterface.swift */; };
 		9093649B2A64FA220091485F /* RouterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9093649A2A64FA220091485F /* RouterInterface.swift */; };
+		90A6593A2A69C1F4009FBAF1 /* MockCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A659392A69C1F4009FBAF1 /* MockCoreDataManager.swift */; };
+		90A6593C2A69C2FE009FBAF1 /* HomeInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A6593B2A69C2FE009FBAF1 /* HomeInteractorTests.swift */; };
+		90B6CB1C2A6897C300F96549 /* MockHomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B6CB1B2A6897C300F96549 /* MockHomeInteractor.swift */; };
+		90B6CB1E2A68992100F96549 /* MockHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B6CB1D2A68992100F96549 /* MockHomeRouter.swift */; };
+		90B6CB202A68993800F96549 /* MockHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B6CB1F2A68993800F96549 /* MockHomeViewController.swift */; };
+		90B6CB222A689B3C00F96549 /* HomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B6CB212A689B3C00F96549 /* HomePresenterTests.swift */; };
 		90BFB3A02A5DEA7200C9EF4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BFB39F2A5DEA7200C9EF4C /* AppDelegate.swift */; };
 		90BFB3A22A5DEA7200C9EF4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BFB3A12A5DEA7200C9EF4C /* SceneDelegate.swift */; };
 		90BFB3A42A5DEA7200C9EF4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BFB3A32A5DEA7200C9EF4C /* ViewController.swift */; };
@@ -75,6 +81,14 @@
 		90BFB3FD2A5E19D600C9EF4C /* HeaderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90BFB3FB2A5E19D600C9EF4C /* HeaderCollectionViewCell.xib */; };
 		90BFB4002A5E1B4D00C9EF4C /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BFB3FE2A5E1B4D00C9EF4C /* ListCollectionViewCell.swift */; };
 		90BFB4012A5E1B4D00C9EF4C /* ListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90BFB3FF2A5E1B4D00C9EF4C /* ListCollectionViewCell.xib */; };
+		90D168072A68F7290007A7FF /* MockDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D168062A68F7290007A7FF /* MockDetailViewController.swift */; };
+		90D168092A68F7480007A7FF /* MockDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D168082A68F7480007A7FF /* MockDetailInteractor.swift */; };
+		90D1680B2A68F75C0007A7FF /* MockDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D1680A2A68F75C0007A7FF /* MockDetailRouter.swift */; };
+		90D168102A68F8560007A7FF /* MockFavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D1680F2A68F8560007A7FF /* MockFavouriteViewController.swift */; };
+		90D168122A68F86F0007A7FF /* MockFavouriteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D168112A68F86F0007A7FF /* MockFavouriteInteractor.swift */; };
+		90D168142A68F88B0007A7FF /* MockFavouriteRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D168132A68F88B0007A7FF /* MockFavouriteRouter.swift */; };
+		90D168182A68F8FF0007A7FF /* DetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D168172A68F8FF0007A7FF /* DetailPresenterTests.swift */; };
+		90D1681A2A68F9170007A7FF /* FavouritePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D168192A68F9170007A7FF /* FavouritePresenterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +150,13 @@
 		909364962A64F9AF0091485F /* TabType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabType.swift; sourceTree = "<group>"; };
 		909364982A64F9FE0091485F /* InteractorInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorInterface.swift; sourceTree = "<group>"; };
 		9093649A2A64FA220091485F /* RouterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterInterface.swift; sourceTree = "<group>"; };
+		90A659392A69C1F4009FBAF1 /* MockCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoreDataManager.swift; sourceTree = "<group>"; };
+		90A6593B2A69C2FE009FBAF1 /* HomeInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorTests.swift; sourceTree = "<group>"; };
+		90B6CB182A6894A600F96549 /* Games.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Games.json; sourceTree = "<group>"; };
+		90B6CB1B2A6897C300F96549 /* MockHomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHomeInteractor.swift; sourceTree = "<group>"; };
+		90B6CB1D2A68992100F96549 /* MockHomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHomeRouter.swift; sourceTree = "<group>"; };
+		90B6CB1F2A68993800F96549 /* MockHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHomeViewController.swift; sourceTree = "<group>"; };
+		90B6CB212A689B3C00F96549 /* HomePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterTests.swift; sourceTree = "<group>"; };
 		90BFB39C2A5DEA7200C9EF4C /* SezilAkdogan_TurkcellCase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SezilAkdogan_TurkcellCase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90BFB39F2A5DEA7200C9EF4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90BFB3A12A5DEA7200C9EF4C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -164,6 +185,15 @@
 		90BFB3FB2A5E19D600C9EF4C /* HeaderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollectionViewCell.xib; sourceTree = "<group>"; };
 		90BFB3FE2A5E1B4D00C9EF4C /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
 		90BFB3FF2A5E1B4D00C9EF4C /* ListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCollectionViewCell.xib; sourceTree = "<group>"; };
+		90D168062A68F7290007A7FF /* MockDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDetailViewController.swift; sourceTree = "<group>"; };
+		90D168082A68F7480007A7FF /* MockDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDetailInteractor.swift; sourceTree = "<group>"; };
+		90D1680A2A68F75C0007A7FF /* MockDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDetailRouter.swift; sourceTree = "<group>"; };
+		90D1680D2A68F7A50007A7FF /* GameDetail.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GameDetail.json; sourceTree = "<group>"; };
+		90D1680F2A68F8560007A7FF /* MockFavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFavouriteViewController.swift; sourceTree = "<group>"; };
+		90D168112A68F86F0007A7FF /* MockFavouriteInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFavouriteInteractor.swift; sourceTree = "<group>"; };
+		90D168132A68F88B0007A7FF /* MockFavouriteRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFavouriteRouter.swift; sourceTree = "<group>"; };
+		90D168172A68F8FF0007A7FF /* DetailPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenterTests.swift; sourceTree = "<group>"; };
+		90D168192A68F9170007A7FF /* FavouritePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritePresenterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +293,20 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		90B6CB172A68940600F96549 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				90D168042A68F6BE0007A7FF /* MockHome */,
+				90D168052A68F7000007A7FF /* MockDetail */,
+				90D1680E2A68F8290007A7FF /* MockFavourite */,
+				90B6CB212A689B3C00F96549 /* HomePresenterTests.swift */,
+				90A6593B2A69C2FE009FBAF1 /* HomeInteractorTests.swift */,
+				90D168172A68F8FF0007A7FF /* DetailPresenterTests.swift */,
+				90D168192A68F9170007A7FF /* FavouritePresenterTests.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		90BFB3932A5DEA7200C9EF4C = {
 			isa = PBXGroup;
 			children = (
@@ -306,6 +350,7 @@
 		90BFB3B82A5DEA7300C9EF4C /* SezilAkdogan_TurkcellCaseTests */ = {
 			isa = PBXGroup;
 			children = (
+				90B6CB172A68940600F96549 /* Mock */,
 				90BFB3B92A5DEA7300C9EF4C /* SezilAkdogan_TurkcellCaseTests.swift */,
 			);
 			path = SezilAkdogan_TurkcellCaseTests;
@@ -460,6 +505,39 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		90D168042A68F6BE0007A7FF /* MockHome */ = {
+			isa = PBXGroup;
+			children = (
+				90B6CB182A6894A600F96549 /* Games.json */,
+				90B6CB1F2A68993800F96549 /* MockHomeViewController.swift */,
+				90B6CB1B2A6897C300F96549 /* MockHomeInteractor.swift */,
+				90B6CB1D2A68992100F96549 /* MockHomeRouter.swift */,
+			);
+			path = MockHome;
+			sourceTree = "<group>";
+		};
+		90D168052A68F7000007A7FF /* MockDetail */ = {
+			isa = PBXGroup;
+			children = (
+				90D168062A68F7290007A7FF /* MockDetailViewController.swift */,
+				90D168082A68F7480007A7FF /* MockDetailInteractor.swift */,
+				90D1680A2A68F75C0007A7FF /* MockDetailRouter.swift */,
+				90D1680D2A68F7A50007A7FF /* GameDetail.json */,
+			);
+			path = MockDetail;
+			sourceTree = "<group>";
+		};
+		90D1680E2A68F8290007A7FF /* MockFavourite */ = {
+			isa = PBXGroup;
+			children = (
+				90D1680F2A68F8560007A7FF /* MockFavouriteViewController.swift */,
+				90D168112A68F86F0007A7FF /* MockFavouriteInteractor.swift */,
+				90D168132A68F88B0007A7FF /* MockFavouriteRouter.swift */,
+				90A659392A69C1F4009FBAF1 /* MockCoreDataManager.swift */,
+			);
+			path = MockFavourite;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -670,6 +748,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				90BFB3BA2A5DEA7300C9EF4C /* SezilAkdogan_TurkcellCaseTests.swift in Sources */,
+				90B6CB202A68993800F96549 /* MockHomeViewController.swift in Sources */,
+				90B6CB1E2A68992100F96549 /* MockHomeRouter.swift in Sources */,
+				90D168182A68F8FF0007A7FF /* DetailPresenterTests.swift in Sources */,
+				90B6CB222A689B3C00F96549 /* HomePresenterTests.swift in Sources */,
+				90D1681A2A68F9170007A7FF /* FavouritePresenterTests.swift in Sources */,
+				90A6593C2A69C2FE009FBAF1 /* HomeInteractorTests.swift in Sources */,
+				90D168122A68F86F0007A7FF /* MockFavouriteInteractor.swift in Sources */,
+				90B6CB1C2A6897C300F96549 /* MockHomeInteractor.swift in Sources */,
+				90A6593A2A69C1F4009FBAF1 /* MockCoreDataManager.swift in Sources */,
+				90D168092A68F7480007A7FF /* MockDetailInteractor.swift in Sources */,
+				90D168072A68F7290007A7FF /* MockDetailViewController.swift in Sources */,
+				90D1680B2A68F75C0007A7FF /* MockDetailRouter.swift in Sources */,
+				90D168142A68F88B0007A7FF /* MockFavouriteRouter.swift in Sources */,
+				90D168102A68F8560007A7FF /* MockFavouriteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
