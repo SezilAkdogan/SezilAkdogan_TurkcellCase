@@ -35,6 +35,11 @@ Screens of the application
 Internet connection is checked and the first page is entered.
 The app utilizes the Splash monitor manager to perform internet queries. If there is no internet connection, the user cannot access the app and will receive a message saying "You are not connected to the internet."
 
+Internet connection - Launch Screen
+---------------------------------------
+<img width="200" height="450" alt="color picker" src="https://github.com/SezilAkdogan/SezilAkdogan_TurkcellCase/assets/111681902/3be7e34f-8640-4c80-a9ca-207e8795efef" />
+
+<img width="200" height="450" alt="color picker" src="https://github.com/SezilAkdogan/SezilAkdogan_TurkcellCase/assets/111681902/c71a370d-d121-409c-9053-ec99f07dd4ef" /> 
 
 First screen: 
 TabBar used in the application, transitions to both the "Favorites" and "Home" pages are made possible.
