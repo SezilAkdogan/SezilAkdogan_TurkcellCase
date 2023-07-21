@@ -52,35 +52,7 @@ final class FavouritePresenterTests: XCTestCase {
         XCTAssertTrue(mockView.updateEmptyViewCalled)
         XCTAssertEqual(mockView.isHiddenValue, false)
     }
-//
-//    func testGetAllFavorites() {
-//        // Create the sample favorites data
-//        let favoriteModel = Favourite(nameText: "Game Name", releasedText: "2023-07-20", backgroundImage: nil, ratings: nil, slug: "game-slug")
-//        let sampleFavorites = [favoriteModel]
-//        mockCoreDataManager.stubbedFavorites = sampleFavorites
-//
-//        // Initially, the view methods should not be invoked
-//        XCTAssertFalse(mockView.reloadDataCalled)
-//        XCTAssertFalse(mockView.showLoadingCalled)
-//        XCTAssertFalse(mockView.hideLoadingCalled)
-//
-//        // Create the presenter and attach the mock view
-//        let presenter = YourPresenterClass()
-//        presenter.attachView(mockView)
-//
-//        // Call the getAllFavorites() method on the presenter, which should trigger the view methods
-//        presenter.getAllFavorites()
-//
-//        // Check if the view methods are called
-//        XCTAssertTrue(mockView.reloadDataCalled)
-//        XCTAssertTrue(mockView.showLoadingCalled)
-//        XCTAssertTrue(mockView.hideLoadingCalled)
-//
-//        // Check if the fetched favorites match the sample data
-//        XCTAssertEqual(presenter.numberOfItems(), 1)
-//        XCTAssertEqual(presenter.getCollectionViewCellData(row: 0), favoriteModel)
-//    }
-//
+
     func testShowAlertParameter() {
         let mockView = MockFavouriteViewController()
         let presenter = FavouritePresenter(router: MockFavouriteRouter(), interactor: MockFavouriteInteractor(), view: mockView)

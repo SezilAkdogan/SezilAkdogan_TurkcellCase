@@ -23,26 +23,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
        window?.rootViewController = navCon
        window?.makeKeyAndVisible()
 
-//        guard let windowScene = scene as? UIWindowScene else { return }
-//        let window = UIWindow(windowScene: windowScene)
-//
-//        // Ana sekme ekranı
-//        let mainTabBarController = MainTabBarViewController()
-//        mainTabBarController.view.backgroundColor = UIColor.red
-//
-//        // Splash ekranı
-//        let splashNavController = SplashRouter.createModule()
-//
-//        // İsteğe bağlı olarak splash ekranını görüntülemek için delay süresi ekleyebilirsiniz
-//        let showSplashDelay: TimeInterval = 1.0
-//
-//        DispatchQueue.main.asyncAfter(deadline: .now() + showSplashDelay) {
-//            window.rootViewController = mainTabBarController
-//        }
-//
-//        self.window = window
-//        window.makeKeyAndVisible()
-        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
