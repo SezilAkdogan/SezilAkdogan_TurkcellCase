@@ -37,9 +37,9 @@ The app utilizes the Splash monitor manager to perform internet queries. If ther
 
 Internet connection - Launch Screen
 ---------------------------------------
-<img width="200" height="450" alt="color picker" src="https://github.com/SezilAkdogan/SezilAkdogan_TurkcellCase/assets/111681902/3be7e34f-8640-4c80-a9ca-207e8795efef" />
+<img width="200" height="450" alt="color picker" src="https://github.com/SezilAkdogan/SezilAkdogan_TurkcellCase/assets/111681902/19733cbb-57da-4e97-96de-7dad5ecf0e89" />
 
-<img width="200" height="450" alt="color picker" src="https://github.com/SezilAkdogan/SezilAkdogan_TurkcellCase/assets/111681902/c71a370d-d121-409c-9053-ec99f07dd4ef" /> 
+<img width="200" height="450" alt="color picker" src="https://github.com/SezilAkdogan/SezilAkdogan_TurkcellCase/assets/111681902/149381eb-dc40-4fc0-9ffb-fe3fab38c8c3" /> 
 
 First screen: 
 TabBar used in the application, transitions to both the "Favorites" and "Home" pages are made possible.
@@ -50,40 +50,32 @@ When the user makes a selection from one of the lists, they can click on it to t
 
 First screenshots
 -----------------------
-<img width="200" height="450" alt="color picker" src="https://github.com/SezilAkdogan/SezilAkdogan_TurkcellCase/assets/111681902/ef94c805-0dc7-40bb-bb3c-bfb494011544" />
+<img width="200" height="450" alt="color picker" src="https://github.com/SezilAkdogan/SezilAkdogan_TurkcellCase/assets/111681902/3629ef3c-3783-410c-b63d-d4f222e5c487" />
 
-<img width="200" height="450" alt="color picker" src="https://github.com/SezilAkdogan/SezilAkdogan_TurkcellCase/assets/111681902/9ee4af5d-85e2-40e8-b2f4-e140ab9191d8)" />
+<img width="200" height="450" alt="color picker" src="https://github.com/SezilAkdogan/SezilAkdogan_TurkcellCase/assets/111681902/cfdc708f-808a-4649-9c46-a1e5807a2165" />
 
-<img width="200" height="450" alt="color picker" src="https://github.com/SezilAkdogan/SezilAkdogan_TurkcellCase/assets/111681902/831b81f0-3f6f-416b-9fdd-bdde408d0fa3" />
+<img width="200" height="450" alt="color picker" src="https://github.com/SezilAkdogan/SezilAkdogan_TurkcellCase/assets/111681902/877698c2-bf7c-4600-9a2d-fbf4e68d9970" />
 
 Second screen:
 The detail screen displays the content of the data that was clicked on from the home screen. Additionally, there is a "Add to Favorites" button on this screen. When the button is clicked, the selected game is saved to CoreData as a favorite, and it will be listed on the Favorites screen. If desired, the user can remove it from the favorites list.
 
 Second screenshots
 ------------------------
-<img width="200" height="450" alt="color picker" src="https://github.com/SezilAkdogan/SezilAkdogan_TurkcellCase/assets/111681902/e403ad35-fcfc-4f01-99f0-821597792c61" />
+<img width="200" height="450" alt="color picker" src="https://github.com/SezilAkdogan/SezilAkdogan_TurkcellCase/assets/111681902/0f07253a-d510-4ed4-bb0f-073f69e1d608" />
 
 Favourite screen: 
 On the detail screen, when the user clicks the heart button located at the top right of the ImageView, the selected game is saved to CoreData, and it will be listed on this screen. When the user clicks on a saved game, it will lead to the game's detail page. However, if the game hasn't been added to favorites yet, the app will display a "No Result" view to the user.
 
 Favourite screenshots
 ------------------------
-<img width="200" height="450" alt="color picker" src="https://github.com/SezilAkdogan/SezilAkdogan_TurkcellCase/assets/111681902/9505e093-1945-4723-a359-3784ea42ef18" />
+<img width="200" height="450" alt="color picker" src="https://github.com/SezilAkdogan/SezilAkdogan_TurkcellCase/assets/111681902/fff18c12-8d94-4724-aeea-b56945fe0228" />
 
-<img width="200" height="450" alt="color picker" src="https://github.com/SezilAkdogan/SezilAkdogan_TurkcellCase/assets/111681902/51c0fd85-8ada-441d-bd95-d15b0be25d74" />
+<img width="200" height="450" alt="color picker" src="https://github.com/SezilAkdogan/SezilAkdogan_TurkcellCase/assets/111681902/0421ba47-9d2e-4b92-adc2-27be059b01f4" />
 
-<img width="200" height="450" alt="color picker" src="https://github.com/SezilAkdogan/SezilAkdogan_TurkcellCase/assets/111681902/9eaaa204-2812-45f4-9cdb-de0287b8b365" />
+<img width="200" height="450" alt="color picker" src="https://github.com/SezilAkdogan/SezilAkdogan_TurkcellCase/assets/111681902/4720a72f-6bf0-4f8a-9f48-ba499184bc92" />
 
 Gifs of screens
 ---------------------------
 <img width="200" height="450" alt="color picker" src="https://github.com/SezilAkdogan/SezilAkdogan_HW4/assets/111681902/bc6391b2-f60e-42e7-96e0-4450ec2d5220" />
 
-<img width="200" height="450" alt="color picker" src="https://github.com/SezilAkdogan/SezilAkdogan_TurkcellCase/assets/111681902/e4ad7271-3875-48a4-a393-bcfc181d7a79" />
-
-<img width="200" height="450" alt="color picker" src="https://github.com/SezilAkdogan/SezilAkdogan_TurkcellCase/assets/111681902/7c58128a-ebc6-489f-8577-37f26053f99d" />
-
-<img width="200" height="450" alt="color picker" src="https://github.com/SezilAkdogan/SezilAkdogan_TurkcellCase/assets/111681902/44ff0b44-88d3-4b09-8d46-9005f42eec0b" />
-
-<img width="200" height="450" alt="color picker" src="https://github.com/SezilAkdogan/SezilAkdogan_TurkcellCase/assets/111681902/d1a586d0-145c-4b03-b92c-c7bc5b09fccf" />
-
-<img width="200" height="450" alt="color picker" src="https://github.com/SezilAkdogan/SezilAkdogan_TurkcellCase/assets/111681902/e5a641c9-c65b-42e6-a25b-2da43c102b70" />
+<img width="200" height="450" alt="color picker" src="https://github.com/SezilAkdogan/SezilAkdogan_TurkcellCase/assets/111681902/2bab0e51-20eb-41e0-888d-cbe3be5fd111" />
