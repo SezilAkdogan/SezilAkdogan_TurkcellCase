@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9037FF742A6D40BC009D26AE /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9037FF732A6D40BC009D26AE /* UIWindow+Extension.swift */; };
 		9038AB962A5E99AA005262A9 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038AB952A5E99AA005262A9 /* Storyboarded.swift */; };
 		9038AB982A5E99D1005262A9 /* StoryboardedNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038AB972A5E99D1005262A9 /* StoryboardedNames.swift */; };
 		9038AB9A2A5E99ED005262A9 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9038AB992A5E99ED005262A9 /* Home.storyboard */; };
@@ -32,9 +33,7 @@
 		9038ABC62A5EB8F0005262A9 /* SplashInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038ABC52A5EB8F0005262A9 /* SplashInteractor.swift */; };
 		9038ABC82A5EB906005262A9 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038ABC72A5EB906005262A9 /* SplashPresenter.swift */; };
 		9038ABCA2A5EB916005262A9 /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038ABC92A5EB916005262A9 /* SplashRouter.swift */; };
-		9038ABCD2A5EB9D7005262A9 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038ABCC2A5EB9D7005262A9 /* Reachability.swift */; };
 		906B5A7C2A60210A002FE58E /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 906B5A7B2A60210A002FE58E /* SDWebImage */; };
-		908430B42A61972D009C9E7C /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908430B32A61972D009C9E7C /* TopViewController.swift */; };
 		908430B72A6197AA009C9E7C /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908430B62A6197AA009C9E7C /* MainTabBarViewController.swift */; };
 		908430B92A6197C6009C9E7C /* MainTabBarInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908430B82A6197C6009C9E7C /* MainTabBarInteractor.swift */; };
 		908430BB2A6197DA009C9E7C /* MainTabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908430BA2A6197DA009C9E7C /* MainTabBarPresenter.swift */; };
@@ -109,6 +108,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9037FF732A6D40BC009D26AE /* UIWindow+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
 		9038AB952A5E99AA005262A9 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		9038AB972A5E99D1005262A9 /* StoryboardedNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardedNames.swift; sourceTree = "<group>"; };
 		9038AB992A5E99ED005262A9 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -134,8 +134,6 @@
 		9038ABC52A5EB8F0005262A9 /* SplashInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashInteractor.swift; sourceTree = "<group>"; };
 		9038ABC72A5EB906005262A9 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
 		9038ABC92A5EB916005262A9 /* SplashRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
-		9038ABCC2A5EB9D7005262A9 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
-		908430B32A61972D009C9E7C /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		908430B62A6197AA009C9E7C /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		908430B82A6197C6009C9E7C /* MainTabBarInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarInteractor.swift; sourceTree = "<group>"; };
 		908430BA2A6197DA009C9E7C /* MainTabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarPresenter.swift; sourceTree = "<group>"; };
@@ -384,7 +382,6 @@
 				90BFB3D72A5DEDC100C9EF4C /* LoadingView.swift */,
 				90BFB3D52A5DEDA800C9EF4C /* LoadingShowable.swift */,
 				90BFB3E22A5DF09A00C9EF4C /* MonitorManager.swift */,
-				9038ABCC2A5EB9D7005262A9 /* Reachability.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -408,6 +405,7 @@
 				909364902A64F6E80091485F /* ArrayExtension.swift */,
 				909364922A64F71E0091485F /* UICollectionViewLayoutExtension.swift */,
 				909364942A64F7460091485F /* NSNotificationExtension.swift */,
+				9037FF732A6D40BC009D26AE /* UIWindow+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -417,7 +415,6 @@
 			children = (
 				90BFB39F2A5DEA7200C9EF4C /* AppDelegate.swift */,
 				90BFB3A12A5DEA7200C9EF4C /* SceneDelegate.swift */,
-				908430B32A61972D009C9E7C /* TopViewController.swift */,
 			);
 			path = Applications;
 			sourceTree = "<group>";
@@ -710,15 +707,14 @@
 				9038ABA32A5E9A9C005262A9 /* ViewInterface.swift in Sources */,
 				90BFB3ED2A5DF35B00C9EF4C /* GameDetailModel.swift in Sources */,
 				9038ABC62A5EB8F0005262A9 /* SplashInteractor.swift in Sources */,
-				9038ABCD2A5EB9D7005262A9 /* Reachability.swift in Sources */,
 				90BFB3E32A5DF09A00C9EF4C /* MonitorManager.swift in Sources */,
 				9038ABAB2A5E9C51005262A9 /* DetailRouter.swift in Sources */,
 				90BFB3EB2A5DF2D400C9EF4C /* GamesModel.swift in Sources */,
+				9037FF742A6D40BC009D26AE /* UIWindow+Extension.swift in Sources */,
 				90BFB3E02A5DEE7500C9EF4C /* NSObject+Extension.swift in Sources */,
 				9038ABAF2A5EA670005262A9 /* HomePresenter.swift in Sources */,
 				9038ABBC2A5EB345005262A9 /* FavouritePresenter.swift in Sources */,
 				9038AB982A5E99D1005262A9 /* StoryboardedNames.swift in Sources */,
-				908430B42A61972D009C9E7C /* TopViewController.swift in Sources */,
 				908430B72A6197AA009C9E7C /* MainTabBarViewController.swift in Sources */,
 				908430B92A6197C6009C9E7C /* MainTabBarInteractor.swift in Sources */,
 				90BFB3A02A5DEA7200C9EF4C /* AppDelegate.swift in Sources */,

@@ -49,7 +49,9 @@ private extension SplashPresenter {
             })
             return
         }
-        
-        router.navigateToMain()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+            self?.router.navigateToMain()
+        }
+       
     }
 }

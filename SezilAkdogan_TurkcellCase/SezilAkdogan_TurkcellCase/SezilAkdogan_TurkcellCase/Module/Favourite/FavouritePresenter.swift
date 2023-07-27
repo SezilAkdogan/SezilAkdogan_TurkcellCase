@@ -37,6 +37,9 @@ final class FavouritePresenter {
         self.notificationCenter = notificationCenter
     }
     
+    deinit {
+        notificationCenter.removeWith(self)
+    }
 }
 
 // MARK: - FavouritePresenterInterface
@@ -49,10 +52,6 @@ extension FavouritePresenter: FavouritePresenterInterface {
                                selector: #selector(shouldUpdateFavourites),
                                name: .shouldUpdateFavourites,
                                object: nil)
-    }
-    
-    func viewWillAppear() {
-        fetchFavourites()
     }
     
     func numberOfItems() -> Int {

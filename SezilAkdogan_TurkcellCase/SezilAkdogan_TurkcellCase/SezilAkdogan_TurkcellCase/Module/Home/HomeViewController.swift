@@ -202,7 +202,6 @@ extension HomeViewController {
     
     func prepareNoResultView() {
         let noResultView = NoResultView(frame: Constant.noResultViewFrame)
-        noResultView.backgroundColor = .red
         noResultView.isHidden = true
         view.insertSubview(noResultView, belowSubview: searchBar)
         self.noResultView = noResultView

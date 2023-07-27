@@ -13,8 +13,6 @@ protocol PresenterInterface: AnyObject {
     func viewDidAppear()
     func viewWillDisappear()
     func viewDidDisappear()
-    func viewWillEnterForeground()
-    func viewDidLayoutSubviews()
 }
 
 extension PresenterInterface {
@@ -23,6 +21,4 @@ extension PresenterInterface {
     func viewDidAppear() {}
     func viewWillDisappear() {}
     func viewDidDisappear() {}
-    func viewWillEnterForeground() {}
-    func viewDidLayoutSubviews() {}
 }

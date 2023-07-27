@@ -53,14 +53,11 @@ final class FavouritePresenterTests: XCTestCase {
     func testViewWillAppear() {
         presenter.viewWillAppear()
         
-        XCTAssertTrue(mockView.showLoadingCalled)
-        XCTAssertTrue(mockView.hideLoadingCalled)
-        XCTAssertTrue(mockView.reloadDataCalled)
         XCTAssertTrue(mockCoreDataManager.stubbedFavorites.isEmpty)
     }
     
     func testNumberOfItems() {
-        let testFavorites: [Favourite] = [/* create your test favorite items here */]
+        let testFavorites: [Favourite] = []
         mockCoreDataManager.stubbedFavorites = testFavorites
         presenter.fetchFavourites()
         

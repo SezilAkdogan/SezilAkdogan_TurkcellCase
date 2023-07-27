@@ -86,7 +86,6 @@ extension DetailViewController: DetailViewInterface {
             let attributedDescription = description.htmlAttributedString(
                 font: Constant.DescriptionTextView.font,
                 fontSize: 16
-                //textColor: Constant.DescriptionTextView.textColor
             )
             descriptionTextView.attributedText = attributedDescription
         } else {

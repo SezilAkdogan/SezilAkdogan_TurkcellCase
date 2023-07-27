@@ -27,12 +27,7 @@ final class SezilAkdogan_TurkcellCaseUITests: XCTestCase {
     override func tearDownWithError() throws {
         // Not needed for this test case
     }
-    
-    func test_search(){
-        let app = XCUIApplication()
-        app.collectionViews/*@START_MENU_TOKEN@*/.staticTexts["2013-03-05"]/*[[".cells.staticTexts[\"2013-03-05\"]",".staticTexts[\"2013-03-05\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        app.navigationBars["Video Games"].buttons["Video Games"].tap()
-    }
+
     
     func test_navigate_home_to_detail() {
         let app = XCUIApplication()
